@@ -4,6 +4,9 @@
   width: 100%;
 }
 
+.col-3-12 {
+  width: 33.3333%;
+}
 
 .searchBar {
   display: flex;
@@ -30,15 +33,30 @@
 
 .movieList{
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.movieLink{
+.movieListElement{
   display: inline-block;
+  list-style: none;
+  width: 33.333%;
 }
 
 
 .movieTitle{
   text-align: center;
+  display: block;
+  margin-top: 10px;
+  height: 400px;
 }
 
+.movieLink {
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  
+}
