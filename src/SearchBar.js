@@ -32,19 +32,18 @@ class SearchBar extends Component{
                     </form>
                 </div>
                 <div className="row">
-        
-                    <ul className="movieList">
-                        {
-                            [...this.state.data].map((el)=>{
-                                return(
-                                    <li key={el.imdbID} className="movieLink"><a href="" ><img className="movieTitle" alt={el.Title} src={el.Poster}/>{el.Title}</a></li>
-                                );
-                            })
-                        }
-                    
-                    </ul>
-                <DisplayMovie movie={this.state.data} showComp={this.showMovie}/>
+                        <ul className="movieList">
+                            {
+                                [...this.state.data].map((el)=>{
+                                    return(
+                                        <li className="movieListElement" key={el.imdbID} ><a className="movieLink" href="" ><img className="movieTitle" alt={el.Title} src={el.Poster}/>{el.Title}</a></li>
+                                    );
+                                })
+                            }
+                        
+                        </ul>
                 </div>
+                <DisplayMovie movie={this.state.data} showComp={this.showMovie}/>
             </div>
         );
     }
